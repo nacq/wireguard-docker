@@ -8,6 +8,7 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=/bin/bash -c "docker compose -f /path/to/wireguard/docker-compose.yml --env-file /path/to/wireguard/.env up --detach"
 ExecStop=/bin/bash -c "docker compose -f /path/to/wireguard/docker-compose.yml --env.file /path/to/wireguard/.env stop"
+WorkingDirectory=/path/to/wireguard
 
 [Install]
 WantedBy=multi-user.target
